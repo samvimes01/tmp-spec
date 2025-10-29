@@ -1,5 +1,7 @@
 # Flight Selection Service — Software Design Specification
 
+(temporary public repo - remove after 31 october 2025)
+
 ## Executive Summary
 This document specifies a scalable Node.js/TypeScript service that consumes the Auriga Flight Comparison API to return optimal flight solutions between airports. The system handles 250k-1M daily users through intelligent caching (85%+ hit rate), horizontal scaling, and cost-effective API usage patterns. Core focus: price-based optimization with extensible scoring for future enhancements.
 
