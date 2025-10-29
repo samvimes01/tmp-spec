@@ -3,7 +3,7 @@
 ## Executive Summary
 This document specifies a scalable Node.js/TypeScript service that consumes the Auriga Flight Comparison API to return optimal flight solutions between airports. The system handles 250k-1M daily users through intelligent caching (85%+ hit rate), horizontal scaling, and cost-effective API usage patterns. Core focus: price-based optimization with extensible scoring for future enhancements.
 
-## 0. Assumptions & Constraints (Resolved)
+## 0. Assumptions & Constraints
 - **Provider API limitations**: No departure/arrival times or durations exposed. "Fastest" mode deferred to Phase 2 pending schedule data integration.
 - **API pricing model**: Assumed pay-per-call; targeting <15% of requests hitting upstream via aggressive caching.
 - **Update frequency**: Flight data assumed to refresh every 15-30 minutes; reference data (airports/airlines) daily.
@@ -20,7 +20,7 @@ This document specifies a scalable Node.js/TypeScript service that consumes the 
   - API requires Bearer authentication.
   - “Best*” is configurable per scenario and user preferences.
 
-## 2. External API (from flight.yaml)
+## 2. External API
 - **Server**: `https://aurigaspa.com/flight-engine/api`
 - **Security**: Bearer token (`Authorization: Bearer <token>`)
 - **Endpoints**:
